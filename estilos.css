@@ -46,45 +46,14 @@ html {
   transition: .5s;
 }
 
-
-
-div.contenedor {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  margin-top: 0;
-  padding-top: 0;
-  background-color: #1a1d2e;
+.contenedor-header header nav ul li a:hover {
   color: #dd3036;
 }
-div.contenedorimg {
-  position: absolute;
-  background-color: #ffffff;
-  height: 100%;
-  width: 30%;
-}
-div.card {
-  position: relative;
-  display: table;
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: 0;
-  padding: 30px;
+.nav-responsive {
   background-color: #dd3036;
-  color: #ffffff;
-  width: 80%;
-  height: 150px;
-}
-div.contenido {
-  display: table-cell;
-  vertical-align: middle;
-}
-h2#sitio {
-  color: #ffffff;
-  font-size: 4em;
-  font-family: Arial, Helvetica, sans-serif;
-}
-h2#sitio span {
-  font-size: 2em;
-  color: #1a1d2e;
+  color: #ffffff ;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
 }

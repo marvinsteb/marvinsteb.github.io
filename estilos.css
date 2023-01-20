@@ -31,12 +31,10 @@ html {
   color: #dd3036;
   text-decoration: none;
 }
-
 .contenedor-header header ul {
   display: flex;
   list-style: none;
 }
-
 .contenedor-header header nav ul li a {
   text-align: none;
   color: #ffffff;
@@ -45,7 +43,6 @@ html {
   text-decoration: none;
   transition: .5s;
 }
-
 .contenedor-header header nav ul li a:hover {
   color: #dd3036;
 }
@@ -56,4 +53,54 @@ html {
   border-radius: 5px;
   cursor: pointer;
   display: none;
+}
+/* inicio */
+.inicio {
+  background: linear-gradient(to top, rgba(26,29,46,.8),rgba(16,29,46,1)),
+  url(img/fondo.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.inicio .contenido-baner {
+  padding: 20px;
+  background-color: #1a1d2e;
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  border-radius: 40px;
+}
+.inicio .contenido-baner img {
+  margin-top: 40px;
+  border: 10px solid #dd3036;
+  display: block;
+  width: 80%;
+  margin: auto;
+  border-radius: 100%;
+}
+.inicio .contenido-baner h1 {
+  margin-top: 40px;
+  font-size: 42px;
+  font-family: 'Righteous';
+}
+.inicio .contenido-baner h2 {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.inicio .contenido-baner .redes a {
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 30px;
+  transition: .3s;
+}
+.inicio .contenido-baner .redes a:hover{
+  color: #dd3036;
 }

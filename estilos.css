@@ -1,6 +1,53 @@
-body {
-  background-color: #1a1d2e;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: 'Work Sans';
+  margin: 0;
+  padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
+/* menu */
+.contenedor-header{
+  background-color:#1a1d2e ;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.contenedor-header header {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.contenedor-header header .logo a {
+  font-family: Righteous;
+  font-size: 36px;
+  color: #dd3036;
+  text-decoration: none;
+}
+
+.contenedor-header header ul {
+  display: flex;
+  list-style: none;
+}
+
+.contenedor-header header nav ul li a {
+  text-align: none;
+  color: #ffffff;
+  margin: 0 15px;
+  padding: 3px;
+  text-decoration: none;
+  transition: .5s;
+}
+
+
+
 div.contenedor {
   position: absolute;
   height: 100%;

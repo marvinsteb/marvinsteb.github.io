@@ -104,126 +104,108 @@ html {
 .inicio .contenido-banner .redes a:hover {
   color: #dd3036;
 }
-/* seccion skills */
-.skills {
+/* sobre mi  */
+.sobremi{
   background-color: #1a1d2e;
   color: #ffffff;
   padding: 50px 20px;
 }
-.skills .contenedor-seccion {
+.sobremi .contenido-seccion{
   max-width: 1100px;
   margin: auto;
 }
-.skills h2 {
+.sobremi h2{
   font-size: 48px;
   font-family: 'Righteous';
   text-align: center;
   padding: 20px 0;
 }
-.skills .fila {
+.sobremi .contenido-seccion p{
+  font: 18px;
+  line-height: 22px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.sobremi .contenido-seccion p span{
+  color: #dd3036;
+  font-weight: bold;
+}
+.sobremi .fila{
   display: flex;
 }
-.skills .fila .col {
+.sobremi .fila .col{
   width: 50%;
-  padding: 0 20px;
 }
-.skills .fila .col h3 {
+.sobremi .fila .col h3{
   font-size: 28px;
   font-family: 'Righteous';
   margin-bottom: 25px;
 }
-.skills .skill > span {
+.sobremi .fila .col ul{
+  list-style: none;
+}
+.sobremi .fila .col ul li{
+  margin:  12px 0;
+}
+.sobremi .fila .col ul li strong{
+  display: inline-block;
+  color: #dd3036;
+  width: 130px;
+}
+.sobremi .fila .col ul li span{
+  background-color: #dd3036;
+  padding: 3px;
   font-weight: bold;
-  display: block;
+  border-radius: 5px;
+}
+.sobremi .fila .col .contenido-intereses{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sobremi .fila .col .contenido-intereses .interes{
+  width: 100px;
+  height: 100px;
+  background-color: #252942;
+  border-radius: 10px;
+  margin: 0 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+}
+.sobremi .fila .col .contenido-intereses .interes:hover{
+  background-color: #dd3036;
+}
+.sobremi .fila .col .contenido-intereses .interes i{
+  font-size: 30px;
   margin-bottom: 10px;
 }
-.skills .skill .barra-skill {
-  height: 8px;
-  width: 80%;
-  background-color: #252942;
+
+.sobremi button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  width: fit-content;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: #ffffff;
   position: relative;
-  margin-bottom: 30px;
+  z-index: 10;
 }
-.skills .skill .progreso {
-  background-color: #dd3036;
+.sobremi button .overlay{
   position: absolute;
   top: 0;
   left: 0;
-  height: 8px;
-}
-.skills .skill .barra-skill span {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  background-color: #dd3036 ;
-  border-radius: 50px;
-  line-height: 40px;
-  text-align: center;
-  top: -17px;
-  right: -15px;
-  font-size: 14px;
-}
-.skills .skill .javascript {
   width: 0;
-  animation: 2s javascript forwards ;
+  height: 100%;
+  background-color: #dd3036;
+  z-index: -1;
+  transition: 1s;
 }
-@keyframes javascript {
-  0%{width: 0%;}
-  100%{width: 40%;}
-}
-.skills .skill .htmlcss {
-  width: 0;
-  animation: 2s htmlcss forwards ;
-}
-@keyframes htmlcss {
-  0%{width: 0%;}
-  100%{width: 60%;}
-}
-.skills .skill .php {
-  width: 0;
-  animation: 2s php forwards ;
-}
-@keyframes php {
-  0%{width: 0%;}
-  100%{width: 70%;}
-}
-.skills .skill .laravel {
-  width: 0;
-  animation: 2s laravel forwards ;
-}
-@keyframes laravel {
-  0%{width: 0%;}
-  100%{width: 80%;}
-}
-.skills .skill .hp {
-  width: 0;
-  animation: 2s hp forwards ;
-}
-@keyframes hp {
-  0%{width: 0%;}
-  100%{width: 70%;}
-}
-.skills .skill .te {
-  width: 0;
-  animation: 2s te forwards ;
-}
-@keyframes te {
-  0%{width: 0%;}
-  100%{width: 75%;}
-}
-.skills .skill .adb {
-  width: 0;
-  animation: 2s adb forwards ;
-}
-@keyframes adb {
-  0%{width: 0%;}
-  100%{width: 70%;}
-}
-.skills .skill .gt {
-  width: 0;
-  animation: 2s gt forwards ;
-}
-@keyframes gt {
-  0%{width: 0%;}
-  100%{width: 75%;}
+.sobremi button:hover .overlay{
+  width: 100%;
 }

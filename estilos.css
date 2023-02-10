@@ -209,3 +209,126 @@ html {
 .sobremi button:hover .overlay{
   width: 100%;
 }
+/* seccion skills */
+.skills {
+  background-color: #1a1d2e;
+  color: #ffffff;
+  padding: 50px 20px;
+}
+.skills .contenedor-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.skills h2 {
+  font-size: 48px;
+  font-family: 'Righteous';
+  text-align: center;
+  padding: 20px 0;
+}
+.skills .fila {
+  display: flex;
+}
+.skills .fila .col {
+  width: 50%;
+  padding: 0 20px;
+}
+.skills .fila .col h3 {
+  font-size: 28px;
+  font-family: 'Righteous';
+  margin-bottom: 25px;
+}
+.skills .skill > span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+.skills .skill .barra-skill {
+  height: 8px;
+  width: 80%;
+  background-color: #252942;
+  position: relative;
+  margin-bottom: 30px;
+}
+.skills .skill .progreso {
+  background-color: #dd3036;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+}
+.skills .skill .barra-skill span {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #dd3036 ;
+  border-radius: 50px;
+  line-height: 40px;
+  text-align: center;
+  top: -17px;
+  right: -15px;
+  font-size: 14px;
+}
+.skills .skill .javascript {
+  width: 0;
+  animation: 2s javascript forwards ;
+}
+@keyframes javascript {
+  0%{width: 0%;}
+  100%{width: 40%;}
+}
+.skills .skill .htmlcss {
+  width: 0;
+  animation: 2s htmlcss forwards ;
+}
+@keyframes htmlcss {
+  0%{width: 0%;}
+  100%{width: 60%;}
+}
+.skills .skill .php {
+  width: 0;
+  animation: 2s php forwards ;
+}
+@keyframes php {
+  0%{width: 0%;}
+  100%{width: 70%;}
+}
+.skills .skill .laravel {
+  width: 0;
+  animation: 2s laravel forwards ;
+}
+@keyframes laravel {
+  0%{width: 0%;}
+  100%{width: 80%;}
+}
+.skills .skill .hp {
+  width: 0;
+  animation: 2s hp forwards ;
+}
+@keyframes hp {
+  0%{width: 0%;}
+  100%{width: 70%;}
+}
+.skills .skill .te {
+  width: 0;
+  animation: 2s te forwards ;
+}
+@keyframes te {
+  0%{width: 0%;}
+  100%{width: 75%;}
+}
+.skills .skill .adb {
+  width: 0;
+  animation: 2s adb forwards ;
+}
+@keyframes adb {
+  0%{width: 0%;}
+  100%{width: 70%;}
+}
+.skills .skill .gt {
+  width: 0;
+  animation: 2s gt forwards ;
+}
+@keyframes gt {
+  0%{width: 0%;}
+  100%{width: 75%;}
+}

@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Experience from "../components/Experience.astro";
+import Skills from "../components/Skills.astro";
+import Portfolio from "../components/Portfolio.astro";
+import Contact from "../components/Contact.astro";
+import BlogCard from "../components/BlogCard.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<Layout
+  title="Marvin Esteban | Desarrollo .NET para empresas"
+  description="Desarrollo de soluciones empresariales con .NET, C# y SQL Server por Marvin Esteban"
+>
+  <Navbar currentPage="home" />
+  <Hero />
+  <About />
+  <Experience />
+  <Skills />
+  <Portfolio />
+
+  {posts.length > 0 && (
+    <section id="blog" class="blog-section">
+      <div class="container">
+        <h2 class="section-title">Últimos Posts</h2>
+        <div class="blog-grid">
+          {posts.map((post) => (
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              pubDate={post.data.pubDate}
+              tags={post.data.tags}
+              url={`/blog/${post.id}/`}
+            />
+          ))}
+        </div>
+        <div class="blog-link">
+          <a href="/blog" class="btn btn-secondary">Ver todos los posts →</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Contact />
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; {new Date().getFullYear()} Marvin Esteban. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</Layout>

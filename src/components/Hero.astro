@@ -1,0 +1,63 @@
+---
+import { linkedInData } from "../data/linkedin-data";
+
+const { profile } = linkedInData;
+---
+
+<section id="home" class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hola, soy</p>
+        <h1 class="hero-title">{profile.name}</h1>
+        <p class="hero-description">
+          Desarrollo soluciones empresariales para que tu negocio trabaje mejor:
+          <span class="highlight">C# y .NET</span> para aplicaciones web, APIs,
+          automatización e integración con <span class="highlight">SQL Server</span>.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>01</h3>
+            <p>Diagnóstico inicial</p>
+          </div>
+          <div class="stat">
+            <h3>02</h3>
+            <p>Plan de solución</p>
+          </div>
+          <div class="stat">
+            <h3>03</h3>
+            <p>Implementación acompañada</p>
+          </div>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Cuéntame tu proyecto</a>
+          <a href="#experience" class="btn btn-secondary">Ver servicios</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img src="/img/foto.jpg" alt={profile.name} />
+          <div class="image-badge">
+            <i class="fas fa-code"></i>
+            <span>.NET & soluciones empresariales</span>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/marvinsteb/" target="_blank" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/marvinsteb" target="_blank" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://twitter.com/marvin_steb" target="_blank" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

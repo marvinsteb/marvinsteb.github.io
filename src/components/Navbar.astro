@@ -1,0 +1,27 @@
+---
+interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = "home" } = Astro.props;
+---
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="logo">ME</a>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="/#home" class="nav-link">Inicio</a></li>
+      <li><a href="/#about" class="nav-link">Cómo ayudo</a></li>
+      <li><a href="/#experience" class="nav-link">Servicios</a></li>
+      <li><a href="/#skills" class="nav-link">Beneficios</a></li>
+      <li><a href="/#portfolio" class="nav-link">Proyectos</a></li>
+      <li><a href="/blog" class="nav-link">Blog</a></li>
+      <li><a href="/#contact" class="nav-link">Contacto</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>

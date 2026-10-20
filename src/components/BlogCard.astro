@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  tags: string[];
+  url: string;
+}
+
+const { title, description, pubDate, tags, url } = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString("es-MX", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<a href={url} class="blog-card">
+  <div class="blog-card-content">
+    <p class="blog-card-date">{formattedDate}</p>
+    <h3 class="blog-card-title">{title}</h3>
+    <p class="blog-card-description">{description}</p>
+    <div class="blog-card-tags">
+      {tags.map((tag) => (
+        <span class="blog-tag">{tag}</span>
+      ))}
+    </div>
+  </div>
+</a>

@@ -1,0 +1,109 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Desarrollo de soluciones empresariales con .NET, C# y SQL Server por Marvin Esteban" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="description" content={description} />
+    <meta name="keywords" content=".NET, C#, ASP.NET Core, SQL Server, APIs, desarrollo empresarial, automatización" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <script>
+      // Mobile menu toggle
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+
+      hamburger?.addEventListener("click", () => {
+        navMenu?.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu?.classList.remove("active");
+        });
+      });
+
+      // Navbar background on scroll
+      window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar") as HTMLElement;
+        if (window.scrollY > 50) {
+          navbar.style.background = "rgba(248, 246, 241, 0.98)";
+          navbar.style.boxShadow = "0 4px 20px rgba(32, 37, 35, 0.08)";
+        } else {
+          navbar.style.background = "rgba(248, 246, 241, 0.94)";
+          navbar.style.boxShadow = "none";
+        }
+      });
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (e) => {
+          e.preventDefault();
+          const href = (e.currentTarget as HTMLAnchorElement).getAttribute("href");
+          if (!href) return;
+          const target = document.querySelector(href);
+          if (target) {
+            const navbarHeight = document.querySelector(".navbar")?.getBoundingClientRect().height ?? 0;
+            const targetPosition = (target as HTMLElement).offsetTop - navbarHeight;
+            window.scrollTo({ top: targetPosition, behavior: "smooth" });
+          }
+        });
+      });
+
+      // Fade in sections
+      const fadeObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              (entry.target as HTMLElement).style.opacity = "1";
+              (entry.target as HTMLElement).style.transform = "translateY(0)";
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll("section").forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "all 0.6s ease";
+        fadeObserver.observe(section);
+      });
+
+      // Contact form
+      const form = document.getElementById("contact-form") as HTMLFormElement;
+      form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const nombre = formData.get("nombre");
+        const email = formData.get("email");
+        const asunto = formData.get("asunto");
+        const mensaje = formData.get("mensaje");
+        const mailto = `mailto:########?subject=${encodeURIComponent(String(asunto))}&body=${encodeURIComponent(`Nombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`)}`;
+        window.location.href = mailto;
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @import "../styles/global.css";
+</style>

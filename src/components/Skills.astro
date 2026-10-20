@@ -1,0 +1,65 @@
+---
+interface Skill {
+  name: string;
+}
+
+interface SkillCategory {
+  title: string;
+  skills: Skill[];
+}
+
+const categories: SkillCategory[] = [
+  {
+    title: "Desarrollo .NET a medida",
+    skills: [
+      { name: "Sistemas que se adaptan a tu operación" },
+      { name: "Arquitectura preparada para crecer" },
+    ],
+  },
+  {
+    title: "Automatización",
+    skills: [
+      { name: "Menos tareas manuales" },
+      { name: "Reportes disponibles a tiempo" },
+      { name: "Decisiones con datos" },
+    ],
+  },
+  {
+    title: "Integración y soporte",
+    skills: [
+      { name: "Sistemas conectados" },
+      { name: "Infraestructura estable" },
+      { name: "Soporte para tu equipo" },
+    ],
+  },
+  {
+    title: "Forma de trabajo",
+    skills: [
+      { name: "Diagnóstico antes de desarrollar" },
+      { name: "Avances visibles" },
+      { name: "Acompañamiento después de entregar" },
+    ],
+  },
+];
+---
+
+<section id="skills" class="skills-section">
+  <div class="container">
+    <h2 class="section-title">Beneficios de trabajar conmigo</h2>
+
+    <div class="skills-grid">
+      {categories.map((cat) => (
+        <div class="skill-category">
+          <h3>{cat.title}</h3>
+          <div class="skill-list">
+            {cat.skills.map((skill) => (
+              <div class="skill-item">
+                <span>{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

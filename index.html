@@ -1,175 +1,274 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="estilos.css">
-    <title>marvinesteban.com</title>
-  </head>
-  <body>
-  <!-- menu -->
-    <div class="contenedor-header">
-      <header>
-        <div class="logo">
-          <a href="#">MARVIN</a>
-        </div>
-        <nav id="nav">
-          <ul>
-            <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#sobremi">SOBRE MI</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#cv">CURRICULUM</a></li>
-            <li><a href="#portafolio">PORTAFOLIO</a></li>
-            <li><a href="#contacto">CONTACTO</a></li>
-          </ul>
-        </nav>
-        <div class="nav-responsive">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </header>
-    </div>
-  <!-- Inicio -->
-  <section id="inicio" class="inicio">
-    <div class="contenido-banner">
-      <div class="contenedor-img">
-        <img src="img/foto.jpg" alt="foto de marvinsteb">
-      </div>
-      <h1>Marvin Esteban</h1>
-      <h2>Back-end PHP Laravel | Analista de datos con Python | SAP B1 | Sql</h2>
-      <div class="redes">
-        <a href="https://www.linkedin.com/in/marvinsteb/"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/marvinsteb"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.facebook.com/marvinsteb/"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://twitter.com/marvin_steb"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.instagram.com/marvin_steb/"><i class="fa-brands fa-instagram"></i></a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="estilos.css">
+  <meta name="description"
+    content="Desarrollo de soluciones empresariales con .NET, C# y SQL Server por Marvin Esteban">
+  <meta name="keywords" content=".NET, C#, ASP.NET Core, SQL Server, APIs, desarrollo empresarial, automatización">
+  <title>Marvin Esteban | Desarrollo .NET para empresas</title>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">ME</a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link">Inicio</a></li>
+        <li><a href="#about" class="nav-link">Cómo ayudo</a></li>
+        <li><a href="#experience" class="nav-link">Servicios</a></li>
+        <li><a href="#skills" class="nav-link">Beneficios</a></li>
+        <li><a href="#portfolio" class="nav-link">Proyectos</a></li>
+        <li><a href="#contact" class="nav-link">Contacto</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
-  </section>
-  <section id="sobremi" class="sobremi">
-    <div class="contenido-seccion">
-      <h2>Sobre Mí</h2>
-      <p><span>Hola, soy Marvin.</span> A lo largo de mi carrera, he realizado proyectos de desarrollo de sistemas en los que he utilizado PHP como lenguaje de programación principal. He trabajado con frameworks como Lavarel para el backend y MySQL para la base de datos. También he realizado tareas de administración y configuración de servidores Windows y Linux, así como de análisis de datos y generación de informes con SQL Server, para los sistemas SAP B1 y ASPEL. </p>
-      <div class="fila">
-        <!-- datos personales -->
-        <div class="col">
-          <h3>Datos Personales</h3>
-          <ul>
-            <li><strong>Fecha de nacimiento</strong> ######## </li>
-            <li><strong>Telefono</strong> ######## </li>
-            <li><strong>Email</strong> ######## </li>
-            <li><strong>Web</strong> www.marvinesteban.com </li>
-            <li><span>Back-end php</span></li>
-          </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">Hola, soy</p>
+          <h1 class="hero-title">Marvin Esteban</h1>
+          <p class="hero-description">
+            Desarrollo soluciones digitales para que tu negocio trabaje mejor: desde
+            <span class="highlight">sistemas web</span> y APIs hasta automatización,
+            <span class="highlight">C# y .NET</span> para aplicaciones web, APIs,
+            automatización e integración con <span class="highlight">SQL Server</span>.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <h3>01</h3>
+              <p>Diagnóstico inicial</p>
+            </div>
+            <div class="stat">
+              <h3>02</h3>
+              <p>Plan de solución</p>
+            </div>
+            <div class="stat">
+              <h3>03</h3>
+              <p>Implementación acompañada</p>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Cuéntame tu proyecto</a>
+            <a href="#experience" class="btn btn-secondary">Ver servicios</a>
+          </div>
         </div>
-        <!-- intereses  -->
-        <div class="col">
-          <h3>Intereses</h3>
-          <div class="contenido-intereses">
-            <div class="interes">
-              <i class="fa-solid fa-gamepad"></i>
-              <span>Juegos</span>
+
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img src="img/foto.jpg" alt="Marvin Esteban">
+            <div class="image-badge">
+              <i class="fas fa-code"></i>
+              <span>.NET & soluciones empresariales</span>
             </div>
-            <div class="interes">
-              <i class="fa-solid fa-headphones"></i>
-              <span>Música</span>
-            </div>
-            <div class="interes">
-              <i class="fa-sharp fa-solid fa-bicycle"></i>
-              <span>Ciclismo</span>
-            </div>
-            <div class="interes">
-              <i class="fa-solid fa-book"></i>
-              <span>Leer</span>
-            </div>
-            <div class="interes">
-              <i class="fa-solid fa-camera"></i>
-              <span>Fotografía</span>
-            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/marvinsteb/" target="_blank" class="social-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/marvinsteb" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/marvin_steb" target="_blank" class="social-link">
+              <i class="fab fa-twitter"></i>
+            </a>
           </div>
         </div>
       </div>
-      <button>Descargar CV 
-        <i class="fa-solid fa-download"></i>
-        <span class="overlay">
-        </span>
-      </button>
-    </div> 
+    </div>
   </section>
 
-  <!-- seccion skills -->
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">Cómo puedo ayudarte</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            Transformo necesidades operativas en soluciones digitales claras y útiles. Desarrollo
+            sistemas robustos con <strong>C#</strong>, <strong>.NET</strong>,
+            <strong>ASP.NET Core</strong> y <strong>SQL Server</strong>, siempre buscando que la tecnología simplifique el trabajo
+            diario de tu equipo.
+          </p>
+          <p>
+            También puedo ayudarte a conectar tus sistemas, automatizar reportes y convertir datos
+            en información accionable. Laravel, Python, SAP Business One y la administración de
+            servidores forman parte de mi experiencia complementaria. Trabajemos en una solución
+            acorde a tus objetivos y presupuesto.
+          </p>
+
+          <div class="interests">
+            <h3>Lo que puedes esperar</h3>
+            <div class="interest-tags">
+              <span><i class="fas fa-comments"></i> Comunicación clara</span>
+              <span><i class="fas fa-rocket"></i> Entregas iterativas</span>
+              <span><i class="fas fa-shield-alt"></i> Soluciones confiables</span>
+              <span><i class="fas fa-chart-line"></i> Enfoque en resultados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <h2 class="section-title">Servicios</h2>
+      <div class="timeline" id="experience-container">
+        <!-- Contenido cargado dinámicamente -->
+      </div>
+
+      <div class="cv-download">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-comments"></i> Hablemos de tu proyecto
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
   <section id="skills" class="skills">
-    <div class="contenido-seccion">
-      <h2>Skills</h2>
-      <div class="fila">
-        <!--skills tecnicos -->
-        <div class="col">
-          <h3>Habilidades Técnicas</h3>
-          <div class="skill">
-            <span>JavaScript</span>
-            <div class="barra-skill">
-              <div class="progreso javascript">
-                <span>40%</span>
+    <div class="container">
+      <h2 class="section-title">Beneficios de trabajar conmigo</h2>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Desarrollo a medida</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Sistemas que se adaptan a tu operación</span>
+                <span>01</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
               </div>
             </div>
-          </div>
-          <div class="skill">
-            <span>HTML & CSS</span>
-            <div class="barra-skill">
-              <div class="progreso htmlcss">
-                <span>60%</span>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Arquitectura preparada para crecer</span>
+                <span>02</span>
               </div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>PHP</span>
-            <div class="barra-skill">
-              <div class="progreso php">
-                <span>70%</span>
-              </div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Laravel</span>
-            <div class="barra-skill">
-              <div class="progreso laravel">
-                <span>80%</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 82%"></div>
               </div>
             </div>
           </div>
         </div>
-        <!--skills profesional -->
-        <div class="col">
-          <h3>Habilidades Profesionales</h3>
-          <div class="skill">
-            <span>Comunicaciòn</span>
-            <div class="barra-skill">
-              <div class="progreso hp">
-                <span>70%</span>
+
+        <div class="skill-category">
+          <h3>Automatización</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Menos tareas manuales</span>
+                <span>03</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Reportes disponibles a tiempo</span>
+                <span>04</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Decisiones con datos</span>
+                <span>05</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
               </div>
             </div>
           </div>
-          <div class="skill">
-            <span>Trabajo en equipo</span>
-            <div class="barra-skill">
-              <div class="progreso te">
-                <span>75%</span>
+        </div>
+
+        <div class="skill-category">
+          <h3>Integración y soporte</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Sistemas conectados</span>
+                <span>06</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 86%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Infraestructura estable</span>
+                <span>07</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 84%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Soporte para tu equipo</span>
+                <span>08</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
               </div>
             </div>
           </div>
-          <div class="skill">
-            <span>Adaptabilidad</span>
-            <div class="barra-skill">
-              <div class="progreso adb">
-                <span>70%</span>
+        </div>
+
+        <div class="skill-category">
+          <h3>Forma de trabajo</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Diagnóstico antes de desarrollar</span>
+                <span>09</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 92%"></div>
               </div>
             </div>
-          </div>
-          <div class="skill">
-            <span>Gestión del tiempo</span>
-            <div class="barra-skill">
-              <div class="progreso gt">
-                <span>80%</span>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Avances visibles</span>
+                <span>10</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Acompañamiento después de entregar</span>
+                <span>11</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 86%"></div>
               </div>
             </div>
           </div>
@@ -177,5 +276,90 @@
       </div>
     </div>
   </section>
-  </body>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 class="section-title">Ejemplos de soluciones</h2>
+      <div class="portfolio-grid" id="portfolio-container">
+        <!-- Contenido cargado dinámicamente -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">¿Tienes un reto? Hablemos</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Cuéntame qué necesitas</h3>
+          <div class="info-items">
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p id="contact-email">tu@email.com</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Teléfono</h4>
+                <p id="contact-phone">+52 555 123 4567</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Ubicación</h4>
+                <p id="contact-location">Ciudad, País</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links-footer">
+            <a href="https://www.linkedin.com/in/marvinsteb/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/marvinsteb" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/marvinsteb/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/marvin_steb" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/marvin_steb/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Tu email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="asunto" placeholder="¿En qué puedo ayudarte?" required>
+            </div>
+            <div class="form-group">
+              <textarea name="mensaje" rows="5" placeholder="Describe brevemente tu proyecto o problema" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Solicitar una conversación
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Marvin Esteban. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="linkedin-data.js"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>

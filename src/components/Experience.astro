@@ -32,14 +32,25 @@ const { services } = linkedInData;
               <li>{desc}</li>
             ))}
           </ul>
-          <a href="#contact" class="service-link">Conocer esta solución <span>→</span></a>
+          <a
+            href={
+              index === 0
+                ? "/servicios/desarrollo-dotnet/"
+                : index === 1
+                  ? "/servicios/automatizacion-empresarial/"
+                  : "/servicios/sap-business-one/"
+            }
+            class="service-link"
+          >
+            Conocer esta solución <span>→</span>
+          </a>
         </article>
       ))}
     </div>
 
     <div class="services-cta">
       <p>¿Tienes un proceso que podría funcionar mejor?</p>
-      <a href="#contact" class="btn btn-primary">
+      <a href="/#contact" class="btn btn-primary">
         <i class="fas fa-comments"></i> Hablemos de tu proyecto
       </a>
     </div>

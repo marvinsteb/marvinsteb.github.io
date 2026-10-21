@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Experience from "../../components/Experience.astro";
+---
+
+<Layout
+  title="Servicios de desarrollo .NET e integración empresarial"
+  description="Desarrollo .NET, automatización empresarial e integraciones con SAP Business One para conectar y mejorar procesos de negocio."
+>
+  <Navbar currentPage="services" />
+  <Experience />
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; {new Date().getFullYear()} Marvin Esteban. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</Layout>

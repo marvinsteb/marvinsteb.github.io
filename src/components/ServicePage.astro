@@ -1,0 +1,42 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  paragraphs: string[];
+  items: string[];
+  technologies: string[];
+}
+
+const { eyebrow, title, intro, paragraphs, items, technologies } = Astro.props;
+---
+
+<main class="service-page">
+  <div class="container">
+    <a class="service-page-back" href="/servicios/">← Ver todos los servicios</a>
+    <p class="section-eyebrow">{eyebrow}</p>
+    <h1 class="service-page-title">{title}</h1>
+    <p class="service-page-intro">{intro}</p>
+
+    <div class="service-page-grid">
+      <div class="service-page-copy">
+        {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+
+      <aside class="service-page-card">
+        <h2>Qué puedo ayudarte a resolver</h2>
+        <ul>
+          {items.map((item) => <li>{item}</li>)}
+        </ul>
+        <div class="service-page-technologies">
+          {technologies.map((technology) => <span>{technology}</span>)}
+        </div>
+      </aside>
+    </div>
+
+    <div class="service-page-cta">
+      <p>¿Tienes un proyecto o proceso que quieres mejorar?</p>
+      <a href="/#contact" class="btn btn-primary">Cuéntame tu proyecto</a>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import ServicePage from "../../components/ServicePage.astro";
+---
+
+<Layout
+  title="Desarrollo .NET para empresas"
+  description="Desarrollo de aplicaciones web, APIs y soluciones backend con C#, ASP.NET Core y SQL Server adaptadas a los procesos de tu empresa."
+>
+  <Navbar currentPage="services" />
+  <ServicePage
+    eyebrow="Desarrollo empresarial"
+    title="Desarrollo .NET para empresas"
+    intro="Construyo aplicaciones y APIs que se adaptan a la forma en que trabaja tu negocio, con una base técnica preparada para crecer."
+    paragraphs={[
+      "Desarrollo soluciones web con C# y .NET para centralizar información, conectar sistemas y hacer más eficientes los procesos de tu operación.",
+      "Puedo ayudarte a crear una aplicación desde cero o mejorar una solución existente. El trabajo incluye el diseño de la API, la integración con tus servicios y una estructura de código clara y mantenible.",
+    ]}
+    items={[
+      "Aplicaciones web empresariales a la medida",
+      "APIs REST e integraciones con sistemas existentes",
+      "Autenticación, permisos y flujos de negocio",
+      "Diseño y optimización de bases de datos",
+    ]}
+    technologies={["C#", ".NET", "ASP.NET Core", "SQL Server", "APIs REST"]}
+  />
+</Layout>

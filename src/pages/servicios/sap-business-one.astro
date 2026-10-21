@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import ServicePage from "../../components/ServicePage.astro";
+---
+
+<Layout
+  title="Integraciones con SAP Business One"
+  description="Integración de SAP Business One con aplicaciones y sistemas externos mediante DI API, Service Layer y APIs REST."
+>
+  <Navbar currentPage="services" />
+  <ServicePage
+    eyebrow="Integración empresarial"
+    title="Integraciones con SAP Business One"
+    intro="Conecto SAP Business One con tus aplicaciones y procesos para reducir trabajo manual y mantener la información sincronizada."
+    paragraphs={[
+      "Desarrollo integraciones con SAP Business One usando DI API y Service Layer, de acuerdo con las necesidades de tu operación y los sistemas que ya utilizas.",
+      "El objetivo es que tus procesos fluyan entre SAP, APIs y herramientas internas con reglas claras, trazabilidad y una solución que puedas mantener a largo plazo.",
+    ]}
+    items={[
+      "Integración de SAP Business One con sistemas externos",
+      "Desarrollo con DI API y Service Layer",
+      "Automatización de procesos entre SAP y APIs",
+      "Diagnóstico y mejora de integraciones existentes",
+    ]}
+    technologies={["SAP Business One", "DI API", "Service Layer", ".NET", "APIs REST"]}
+  />
+</Layout>

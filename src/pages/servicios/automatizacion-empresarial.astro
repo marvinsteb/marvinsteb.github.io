@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import ServicePage from "../../components/ServicePage.astro";
+---
+
+<Layout
+  title="Automatización empresarial y análisis de datos"
+  description="Automatización de tareas, reportes y procesos empresariales con SQL Server, Python y dashboards para tomar mejores decisiones."
+>
+  <Navbar currentPage="services" />
+  <ServicePage
+    eyebrow="Procesos y datos"
+    title="Automatización empresarial y análisis de datos"
+    intro="Convierto tareas repetitivas y datos dispersos en procesos más simples, medibles y útiles para tu equipo."
+    paragraphs={[
+      "Identifico oportunidades de automatización en reportes, cargas de información y tareas operativas que consumen tiempo y pueden generar errores.",
+      "También puedo ayudarte a ordenar tus datos, optimizar consultas y construir reportes que faciliten el seguimiento de tu operación y la toma de decisiones.",
+    ]}
+    items={[
+      "Automatización de tareas y reportes repetitivos",
+      "Consultas y optimización de SQL Server y MySQL",
+      "Integración de datos entre sistemas",
+      "Dashboards e informes operativos",
+    ]}
+    technologies={["SQL Server", "MySQL", "Python", "ETL", "Dashboards"]}
+  />
+</Layout>

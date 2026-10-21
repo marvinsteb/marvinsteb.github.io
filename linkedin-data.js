@@ -7,10 +7,9 @@ const linkedInData = {
     headline:
       "Desarrollo de soluciones empresariales con .NET",
     summary:
-      "Me especializo en crear soluciones empresariales con C#, .NET, ASP.NET Core y SQL Server. También cuento con experiencia complementaria en Laravel, Python, SAP Business One y administración de servidores.",
-    location: "",
-    email: "########",
-    phone: "########",
+      "Me especializo en crear soluciones backend e integraciones empresariales con C#, .NET y SAP Business One. Desarrollo APIs, workers y automatizaciones con DI API y Service Layer para conectar sistemas, reducir tareas manuales y mejorar la operación del negocio.",
+    location: "Guatemala, Guatemala",
+    email: "mmenchu@outlook.com",
     website: "www.marvinesteban.com",
   },
 
@@ -36,13 +35,13 @@ const linkedInData = {
       ],
     },
     {
-      title: "Integración y soporte técnico",
-      company: "Conecta y estabiliza tus sistemas",
-      period: "SAP B1, servidores y aplicaciones",
+      title: "Integración con SAP Business One",
+      company: "Conecta SAP B1 con tus sistemas y procesos",
+      period: "DI API, Service Layer y APIs REST",
       description: [
-        "Integración con SAP Business One y otros sistemas empresariales",
-        "Configuración y administración de servidores Linux y Windows",
-        "Diagnóstico y mejora de aplicaciones existentes",
+        "Integración de SAP B1 mediante DI API y Service Layer",
+        "Automatización de procesos entre SAP, APIs y sistemas externos",
+        "Diagnóstico, soporte y mejora de aplicaciones empresariales",
       ],
     },
   ],

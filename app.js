@@ -30,18 +30,30 @@ function loadServices() {
   if (!container || !linkedInData || !linkedInData.services) return;
 
   linkedInData.services.forEach((service) => {
-    const item = document.createElement("div");
-    item.className = "item";
+    const item = document.createElement("article");
+    item.className = "service-card";
 
-    const title = document.createElement("h4");
+    const top = document.createElement("div");
+    top.className = "service-card-top";
+
+    const number = document.createElement("span");
+    number.className = "service-number";
+    number.textContent = `0${linkedInData.services.indexOf(service) + 1}`;
+
+    const icon = document.createElement("i");
+    icon.className = `fas ${linkedInData.services.indexOf(service) === 0 ? "fa-code" : linkedInData.services.indexOf(service) === 1 ? "fa-gears" : "fa-plug"}`;
+    top.appendChild(number);
+    top.appendChild(icon);
+
+    const title = document.createElement("h3");
     title.textContent = service.title;
 
     const company = document.createElement("span");
-    company.className = "company";
+    company.className = "service-summary";
     company.textContent = service.company;
 
     const periodo = document.createElement("span");
-    periodo.className = "periodo";
+    periodo.className = "service-tech";
     periodo.textContent = service.period;
 
     const description = document.createElement("ul");
@@ -55,6 +67,12 @@ function loadServices() {
     item.appendChild(company);
     item.appendChild(periodo);
     item.appendChild(description);
+    const link = document.createElement("a");
+    link.className = "service-link";
+    link.href = "#contact";
+    link.innerHTML = "Conocer esta solución <span>→</span>";
+    item.prepend(top);
+    item.appendChild(link);
     container.appendChild(item);
   });
 }
@@ -111,12 +129,11 @@ function loadContactInfo() {
   if (!linkedInData) return;
 
   const locationEl = document.getElementById("contact-location");
-  const phoneEl = document.getElementById("contact-phone");
   const emailEl = document.getElementById("contact-email");
 
   if (locationEl)
-    locationEl.textContent = linkedInData.profile.location || "Ciudad, País";
-  if (phoneEl) phoneEl.textContent = linkedInData.profile.phone;
+    locationEl.textContent =
+      linkedInData.profile.location || "Guatemala, Guatemala";
   if (emailEl) emailEl.textContent = linkedInData.profile.email;
 }
 

@@ -6,23 +6,39 @@ const { services } = linkedInData;
 
 <section id="experience" class="experience-section">
   <div class="container">
-    <h2 class="section-title">Servicios</h2>
-    <div class="timeline">
-      {services.map((service) => (
-        <div class="timeline-item">
-          <h4>{service.title}</h4>
-          <span class="company">{service.company}</span>
-          <span class="periodo">{service.period}</span>
+    <div class="services-heading">
+      <div>
+        <p class="section-eyebrow">Cómo puedo ayudarte</p>
+        <h2 class="section-title">Soluciones para que tu operación avance</h2>
+      </div>
+      <p class="services-intro">
+        Integro SAP Business One con tus sistemas mediante DI API y Service Layer, automatizo
+        tareas repetitivas y desarrollo herramientas adaptadas a tu operación.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      {services.map((service, index) => (
+        <article class="service-card">
+          <div class="service-card-top">
+            <span class="service-number">0{index + 1}</span>
+            <i class:list={["fas", index === 0 ? "fa-code" : index === 1 ? "fa-gears" : "fa-plug"]}></i>
+          </div>
+          <h3>{service.title}</h3>
+          <p class="service-summary">{service.company}</p>
+          <span class="service-tech">{service.period}</span>
           <ul>
             {service.description.map((desc) => (
               <li>{desc}</li>
             ))}
           </ul>
-        </div>
+          <a href="#contact" class="service-link">Conocer esta solución <span>→</span></a>
+        </article>
       ))}
     </div>
 
-    <div class="cv-download">
+    <div class="services-cta">
+      <p>¿Tienes un proceso que podría funcionar mejor?</p>
       <a href="#contact" class="btn btn-primary">
         <i class="fas fa-comments"></i> Hablemos de tu proyecto
       </a>

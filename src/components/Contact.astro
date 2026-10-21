@@ -15,7 +15,7 @@ const { profile } = linkedInData;
             <i class="fas fa-envelope"></i>
             <div>
               <h4>Email</h4>
-              <p>{profile.email}</p>
+              <p><a href={`mailto:${profile.email}`}>{profile.email}</a></p>
             </div>
           </div>
           <div class="info-item">

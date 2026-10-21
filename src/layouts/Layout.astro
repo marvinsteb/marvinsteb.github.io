@@ -5,6 +5,8 @@ interface Props {
 }
 
 const { title, description = "Integraciones con SAP Business One mediante DI API y Service Layer, automatización y desarrollo backend con .NET por Marvin Esteban" } = Astro.props;
+const siteUrl = Astro.site ?? Astro.url;
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 ---
 
 <!DOCTYPE html>
@@ -20,9 +22,50 @@ const { title, description = "Integraciones con SAP Business One mediante DI API
       referrerpolicy="no-referrer"
     />
     <meta name="description" content={description} />
-    <meta name="keywords" content=".NET, C#, SAP Business One, DI API, Service Layer, SQL Server, APIs, automatización" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_GT" />
+    <meta property="og:site_name" content="Marvin Esteban" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={new URL("/img/foto.jpg", siteUrl).href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL("/img/foto.jpg", siteUrl).href} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": `${Astro.site}#professional-service`,
+      name: "Marvin Esteban",
+      url: Astro.site,
+      image: new URL("/img/foto.jpg", siteUrl).href,
+      description,
+      email: "mailto:mmenchu@outlook.com",
+      areaServed: "Guatemala",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Guatemala",
+        addressCountry: "GT",
+      },
+      sameAs: [
+        "https://www.linkedin.com/in/marvinsteb/",
+        "https://github.com/marvinsteb",
+      ],
+      knowsAbout: [
+        ".NET",
+        "C#",
+        "SAP Business One",
+        "DI API",
+        "Service Layer",
+        "SQL Server",
+        "Automatización empresarial",
+      ],
+    })} />
   </head>
   <body>
     <slot />
